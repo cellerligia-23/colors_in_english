@@ -15,23 +15,26 @@ class SpeechApi {
       button.style.color = "#000000";
     };
 
-    this.speechApi.endstart = () => {
+    this.speechApi.onend = () => {
       button.textContent = "Responder";
       button.style.backgroundColor = "transparent";
       button.style.color = "#fff";
+      createElementeColor();
     };
 
     this.speechApi.onresult = e => {
-      // console.log(e);
+      console.log(e);
       // console.log(text_color.innerText);
       let resultIndex = e.resultIndex;
       let transcript = e.results[resultIndex][0].transcript;
+      
       console.log(transcript);
+      console.log(text_color.innerText);
 
-      if (text_color.innerText === transcript) {
+      if (text_color.innerText.toLowerCase() === transcript.toLowerCase()) {
         updatePoints(1);
       } else {
-        updatePoints(-1)
+        updatePoints(-1);
       }
     };
   };
