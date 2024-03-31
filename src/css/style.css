@@ -63,10 +63,19 @@ main section div.texts-game {
   text-align: center;
 }
 
-main section div.texts-game p {
+main section div.texts-game .text-color {
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 1.5rem;
+}
+
+main section div.texts-game .speaks-text {
+  padding: .5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #2c2d30;
+  font-size: 1.3rem;
+  margin-top: 1.5rem
 }
 
 main section div.display-game {
@@ -80,6 +89,7 @@ main section div.display-game {
   height: 17.5rem;
   width: 17.5rem;
 }
+
 
 main section div.display-game img{
   height: 16.5rem;
@@ -136,8 +146,12 @@ footer i {
     font-size: 2rem;
   }
   
-  main section div.texts-game p {
+  main section div.texts-game .text-color {
     font-size: 2rem;
+  }
+
+  main section div.texts-game .speaks-text {
+    display: none;
   }
 
   main section .btn {
@@ -157,6 +171,42 @@ footer i {
     height: 19rem;
     width: 19rem;
   }
+     
+  main section.container-section-2  {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section.container-section-2 .speaks {
+    margin-top: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.75rem;
+    width: 15.625rem;
+    background: #fff;
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 2.188rem;
+    color: #2c2d30;
+    position: relative;
+  }
+
+  main section.container-section-2 .speaks:before {
+    content: "";
+    position: absolute;
+    border-left: 1.25rem solid #fff;
+    border-right: 1.25rem solid transparent;
+    border-top: 1.25rem solid #fff;
+    border-bottom: 1.25rem solid transparent;
+    right: -1.25rem;
+    top: .625rem;
+  }
+
+  main section.container-section-2 .speaks {
+    display: none;
+  }
 
   main section.container-section-2 img {
     height: 31.25rem;
@@ -173,3 +223,6 @@ footer i {
   }
 }
 
+/*
+Código CSS do Balão: https: //acervolima.com/como-criar-baloes-de-fala-sem-imagens-usando-css/
+*/

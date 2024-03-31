@@ -1,5 +1,7 @@
 /* API PARA RECONHECIMENTO DE VOZ */
 const button = document.getElementById("btn");
+const speaks = document.getElementById("speaks");
+const speaks_text = document.getElementById("speaks-text");
 
 class SpeechApi {
   constructor() {
@@ -31,9 +33,16 @@ class SpeechApi {
       console.log(transcript);
       console.log(text_color.innerText);
 
+      speaks.innerText = transcript;
+      speaks_text.textContent = transcript;
+
       if (text_color.innerText.toLowerCase() === transcript.toLowerCase()) {
+        speaks_text.display = "block";
+        speaks.style.display = "block";
         updatePoints(1);
       } else {
+        speaks_text.display = "block";
+        speaks.style.display = "block";
         updatePoints(-1);
       }
     };
